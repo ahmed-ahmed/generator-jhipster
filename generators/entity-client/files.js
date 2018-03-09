@@ -80,6 +80,12 @@ const angularFiles = {
                     template: true,
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-dialog.component.html`
                 },
+{
+    file: 'entities/entity-management-aff.component.html',
+        method: 'processHtml',
+    template: true,
+    renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-add.component.html`
+},
                 {
                     file: 'entities/entity-management-delete.component.html',
                     method: 'processHtml',
@@ -94,6 +100,10 @@ const angularFiles = {
                     file: 'entities/entity-management-dialog.component.ts',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-dialog.component.ts`
                 },
+{
+    file: 'entities/entity-management-add.component.ts',
+        renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-add.component.ts`
+},
                 {
                     file: 'entities/entity-management-delete.component.ts',
                     renameTo: generator => `entities/${generator.entityFolderName}/${generator.entityFileName}-delete.component.ts`
