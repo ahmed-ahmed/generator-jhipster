@@ -29,9 +29,9 @@ import { Observable } from 'rxjs/Observable';
 import * as moment from 'moment';
 <%_ } _%>
 
-import { SERVER_API_URL } from 'app/app.constants';
-import { createRequestOption } from 'app/shared';
-import { I<%= entityAngularName %> } from 'app/shared/model/<%= entityModelFileName %>.model';
+import { SERVER_API_URL } from '../app.constants';
+import { createRequestOption } from '../shared';
+import { I<%= entityAngularName %> } from '../models/<%= entityModelFileName %>.model';
 
 export type EntityResponseType = HttpResponse<I<%= entityAngularName %>>;
 export type EntityArrayResponseType = HttpResponse<I<%= entityAngularName %>[]>;

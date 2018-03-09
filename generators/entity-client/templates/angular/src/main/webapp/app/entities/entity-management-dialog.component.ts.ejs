@@ -35,13 +35,13 @@ import { Observable } from 'rxjs/Observable';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 <%_ if ( fieldsContainInstant || fieldsContainZonedDateTime ) { _%>
 import { DateFormatPipe, ParsePipe } from 'angular2-moment';
-import { DATE_TIME_FORMAT } from 'app/shared/constants/input.constants';
+import { DATE_TIME_FORMAT } from '../../shared/constants/input.constants';
 <%_ } _%>
 import { JhiEventManager<% if (queries && queries.length > 0) { %>, JhiAlertService<% } %><% if (fieldsContainBlob) { %>, JhiDataUtils<% } %> } from 'ng-jhipster';
 
-import { I<%= entityAngularName %> } from 'app/shared/model/<%= entityModelFileName %>.model';
-import { <%= entityAngularName %>PopupService } from './<%= entityFileName %>-popup.service';
-import { <%= entityAngularName %>Service } from './<%= entityFileName %>.service';
+import { I<%= entityAngularName %> } from '../../models/<%= entityModelFileName %>.model';
+import { <%= entityAngularName %>PopupService } from '../../services/<%= entityFileName %>-popup.service';
+import { <%= entityAngularName %>Service } from '../../services/<%= entityFileName %>.service';
 <%_
 let hasRelationshipQuery = false;
 Object.keys(differentRelationships).forEach(key => {

@@ -26,18 +26,18 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { JhiEventManager, <% if (pagination !== 'no') { %>JhiParseLinks, <% } %>JhiAlertService<% if (fieldsContainBlob) { %>, JhiDataUtils<% } %> } from 'ng-jhipster';
 
-import { I<%= entityAngularName %> } from 'app/shared/model/<%= entityModelFileName %>.model';
-import { Principal } from 'app/core';
+import { I<%= entityAngularName %> } from '../../models/<%= entityModelFileName %>.model';
+import { Principal } from '../../shared';
 <%_ if (pagination !== 'no') { %>
-import { ITEMS_PER_PAGE } from 'app/shared';
+import { ITEMS_PER_PAGE } from '../../shared';
 <%_ } _%>
-import { <%= entityAngularName %>Service } from './<%= entityFileName %>.service';
+import { <%= entityAngularName %>Service } from '../../services/<%= entityFileName %>.service';
 
 @Component({
     selector: '<%= jhiPrefixDashed %>-<%= entityFileName %>',
-    templateUrl: './<%= entityFileName %>.component.html'
+    templateUrl: './<%= entityFileName %>-list.component.html'
 })
-export class <%= entityAngularName %>Component implements OnInit, OnDestroy {
+export class <%= entityAngularName %>ListComponent implements OnInit, OnDestroy {
     <%_ if (pagination === 'pagination' || pagination === 'pager') { _%>
 <%- include('pagination-template', {toArrayString: toArrayString}); -%>
     <%_ } else if (pagination === 'infinite-scroll') { _%>

@@ -28,20 +28,20 @@ import { ActivatedRoute, Data } from '@angular/router';
 <%_ } _%>
 
 import { <%=angularXAppName%>TestModule } from '../../../<%= entityParentPathAddition %>test.module';
-import { <%= entityAngularName %>Component } from 'app/entities/<%= entityFolderName %>/<%= entityFileName %>.component';
-import { <%= entityAngularName %>Service } from 'app/entities/<%= entityFolderName %>/<%= entityFileName %>.service';
-import { <%= entityAngularName %> } from 'app/shared/model/<%= entityModelFileName %>.model';
+import { <%= entityAngularName %>ListComponent } from '../../../../../../main/webapp/app/entities/<%= entityFolderName %>';
+import { <%= entityAngularName %>Service } from '../../../../../../main/webapp/app/services/<%= entityFileName %>.service';
+import { <%= entityAngularName %> } from '../../../../../../main/webapp/app/models/<%= entityModelFileName %>.model';
 
 describe('Component Tests', () => {
     describe('<%= entityAngularName %> Management Component', () => {
-        let comp: <%= entityAngularName %>Component;
-        let fixture: ComponentFixture<<%= entityAngularName %>Component>;
+        let comp: <%= entityAngularName %>ListComponent;
+        let fixture: ComponentFixture<<%= entityAngularName %>ListComponent>;
         let service: <%= entityAngularName %>Service;
 
         beforeEach(() => {
             TestBed.configureTestingModule({
                 imports: [<%=angularXAppName%>TestModule],
-                declarations: [<%= entityAngularName %>Component],
+                declarations: [<%= entityAngularName %>ListComponent],
                 providers: [
                     <%= entityAngularName %>Service<% if (pagination !== 'no') { %>, {
                     provide: ActivatedRoute,
@@ -58,10 +58,10 @@ describe('Component Tests', () => {
                     }<% } %>
                 ]
             })
-            .overrideTemplate(<%= entityAngularName %>Component, '')
+            .overrideTemplate(<%= entityAngularName %>ListComponent, '')
             .compileComponents();
 
-            fixture = TestBed.createComponent(<%= entityAngularName %>Component);
+            fixture = TestBed.createComponent(<%= entityAngularName %>ListComponent);
             comp = fixture.componentInstance;
             service = fixture.debugElement.injector.get(<%= entityAngularName %>Service);
         });

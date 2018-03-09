@@ -237,7 +237,7 @@ module.exports = class extends PrivateBase {
                 if (microServiceName) {
                     importName = `${importName} as ${_.upperFirst(_.camelCase(microServiceName))}${entityAngularName}Module`;
                 }
-                let importStatement = `|import { ${importName} } from './${entityFolderName}/${entityFileName}.module';`;
+                let importStatement = `|import { ${importName} } from '../modules/${entityFileName}.module';`;
                 if (importStatement.length > constants.LINE_LENGTH) {
                     importStatement =
                         `|// prettier-ignore

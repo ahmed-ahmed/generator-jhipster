@@ -23,9 +23,9 @@ _%>
 import { TestBed, getTestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { DateFormatPipe, ParsePipe } from 'angular2-moment';
-import { <%= entityAngularName %>Service } from 'app/entities/<%= entityFolderName %>/<%= entityFileName %>.service';
-import { <%= entityAngularName %> } from 'app/shared/model/<%= entityModelFileName %>.model';
-import { SERVER_API_URL } from 'app/app.constants';
+import { <%= entityAngularName %>Service } from '../../../../../main/webapp/app/services/<%= entityFileName %>.service';
+import { <%= entityAngularName %> } from '../../../../../main/webapp/app/models/<%= entityModelFileName %>.model';
+import { SERVER_API_URL } from '../../../../../main/webapp/app/app.constants';
 
 describe('Service Tests', () => {
 

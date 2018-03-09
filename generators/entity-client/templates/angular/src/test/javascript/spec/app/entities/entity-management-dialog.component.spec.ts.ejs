@@ -28,9 +28,9 @@ import { JhiEventManager } from 'ng-jhipster';
 import { DateFormatPipe, ParsePipe } from 'angular2-moment';
 
 import { <%=angularXAppName%>TestModule } from '../../../<%= entityParentPathAddition %>test.module';
-import { <%= entityAngularName %>DialogComponent } from 'app/entities/<%= entityFolderName %>/<%= entityFileName %>-dialog.component';
-import { <%= entityAngularName %>Service } from 'app/entities/<%= entityFolderName %>/<%= entityFileName %>.service';
-import { <%= entityAngularName %> } from 'app/shared/model/<%= entityModelFileName %>.model';
+import { <%= entityAngularName %>DialogComponent } from '../../../../../../main/webapp/app/entities/<%= entityFileName %>';
+import { <%= entityAngularName %>Service } from '../../../../../../main/webapp/app/services/<%= entityFileName %>.service';
+import { <%= entityAngularName %> } from '../../../../../../main/webapp/app/models/<%= entityModelFileName %>.model';
 
 <%_
 let hasRelationshipQuery = false;

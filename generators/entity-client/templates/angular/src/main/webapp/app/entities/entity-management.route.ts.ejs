@@ -38,16 +38,16 @@ import { <% if (pagination === 'pagination' || pagination === 'pager') { %>Resol
 import { JhiPaginationUtil } from 'ng-jhipster';
 <%_ } _%>
 
-import { UserRouteAccessService } from 'app/core';
-import { <%= entityAngularName %>Component } from './<%= entityFileName %>.component';
-import { <%= entityAngularName %>DetailComponent } from './<%= entityFileName %>-detail.component';
-import { <%= entityAngularName %>PopupComponent } from './<%= entityFileName %>-dialog.component';
+import { UserRouteAccessService } from '../shared';
+
+import { <%= entityAngularName %>Component, <%= entityAngularName %>DetailComponent, <%= entityAngularName %>PopupComponent} from '../entities/<%= entityFileName %>';
+
 <%_ if (entityFileName.length <= 30) { _%>
-import { <%= entityAngularName %>DeletePopupComponent } from './<%= entityFileName %>-delete-dialog.component';
+import { <%= entityAngularName %>DeletePopupComponent } from '../entities/<%= entityFileName %>';
 <%_ } else { _%>
 import {
     <%= entityAngularName %>DeletePopupComponent
-} from './<%= entityFileName %>-delete-dialog.component';
+} from '../entities/<%= entityFileName %>';
 <%_ } _%>
 
 <%_ if (pagination === 'pagination' || pagination === 'pager') { _%>
