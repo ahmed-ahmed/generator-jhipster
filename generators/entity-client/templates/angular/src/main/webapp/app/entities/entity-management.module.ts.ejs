@@ -31,6 +31,7 @@ import { <%= entityInstance %>Route } from '../routes/contact.route';
 import { <%= entityInstance %>PopupRoute } from '../routes/contact.route';
 
 import {
+    <%= entityAngularName %>AddComponent,
     <%= entityAngularName %>ListComponent,
     <%= entityAngularName %>DetailComponent,
     <%= entityAngularName %>DialogComponent,
@@ -57,6 +58,7 @@ const ENTITY_STATES = [
         RouterModule.forChild(ENTITY_STATES)
     ],
     declarations: [
+        <%= entityAngularName %>AddComponent,
         <%= entityAngularName %>ListComponent,
         <%= entityAngularName %>DetailComponent,
         <%= entityAngularName %>DialogComponent,
@@ -65,6 +67,7 @@ const ENTITY_STATES = [
         <%= entityAngularName %>DeletePopupComponent,
     ],
     entryComponents: [
+        <%= entityAngularName %>AddComponent,
         <%= entityAngularName %>ListComponent,
         <%= entityAngularName %>DialogComponent,
         <%= entityAngularName %>PopupComponent,
